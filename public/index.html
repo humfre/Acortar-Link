@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acortador de URLs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Acortador de URLs</h1>
+        <form id="shortenForm">
+            <div class="form-group">
+                <label for="url">URL:</label>
+                <input type="url" id="url" class="form-control" placeholder="Ingresa la URL aquí" required>
+            </div>
+            <div class="form-group">
+                <label for="custom_id">ID Personalizado (opcional):</label>
+                <input type="text" id="custom_id" class="form-control" placeholder="Ingresa un ID personalizado">
+            </div>
+            <button type="submit" class="btn btn-primary">Acortar URL</button>
+        </form>
+        <div id="result" class="alert"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
